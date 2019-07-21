@@ -6,5 +6,5 @@ RUN ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
 RUN dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get install -y php7.2-cli php7.2-xml nodejs npm git composer
 RUN npm install -g yarn
-RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server mariadb-client
 RUN /etc/init.d/ssh start
